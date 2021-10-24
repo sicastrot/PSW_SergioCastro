@@ -8,98 +8,108 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;300;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./sass/custom.css">
-    <script type=" text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"> <!-- Fuente de Iconos-->
+    <link rel="stylesheet" href="./css/modoDark.css"> <!-- Estilo Css Modo Oscuro -->
+    
 </head>
+<body>
+    <!-- Insercion Codigo Facebook    -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v10.0" nonce="QYx9odpD"></script>
+    <!-- Fin Insercion Facebook-->
+
 <main>
     <main class="container d-flex align-items-center justify-content-center ">
         <div class="row">
             <div class="col-12 col-lg-12">
             <!--Inicio de la Barra de Navegacion-->
-                    <nav class="navbar navbar-expand-lg navbar-light ">
-                        <div class="container-fluid">
-                        <a class="navbar-brand" href="#"><img src="./imagenes/contacto.jpg" class="img-fluid" width="100px" height="100px" alt=""></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Temas 
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="./TemasEtiquetas.html">Etiquetas semánticas</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="./TemasListas.html">Listas y enlaces</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Recursos Digitales
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="./Podcast.html">Podcast</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="./Videos.html">Videos</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Aprendizaje
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="./seccion1.html">Evaluación de conocimientos adquiridos Etiquetas Semanticas</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="./seccion2.html">Evaluación de conocimientos adquiridos Listas y Enlaces</a></li>
-                                    </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./autor.html">Autor</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./Contacto.html">Contacto</a>
-                            </li>
-                            </ul>
-                            
-                        </div>
-                        </div>
-                    </nav>
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container-fluid bg-secondary shadow-sm">
+                  <a class="navbar-brand" href=""><img src="./imagenes/BABG-NEGRO.png" class="img-fluid" width="100px" height="100px" alt=""></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <!--Inicio Boton Modo Noche-->
+                            <button class="darkModeSwitch" id="switch" style="position: absolute; right: 2%;">
+                            <span><i class="fa fa-sun"></i></span>   
+                            <span><i class="fa fa-moon"></i></span>
+                            </button><!--Fin Boton Modo Noche-->
+                      <li class="nav-item ">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link " href="#" >
+                          Administrador
+                        </a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Inventario
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./inventario.html">Ingresar Producto</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="./actualizarInventario.html">Actualizar Producto</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="./borrarInventario.html">Eliminar Producto</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="./consultarInventario.html">Consultar Producto</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link " href="./utilidades.html" >
+                          Utilidades
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./autor.html">Autor</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./Contacto.html">Contacto</a>
+                    </li>
+                    </ul>
+                    
+                  </div>
+                </div>
+              </nav>
                 <!--Fin de la Barra de Navegacion-->
             </div>
+            <div class="col-12 col-lg-12">
+              <h3 class="card-title text-center" style="color:red;"> DATA MANAGEMENT, BALANCE AND RECORDING</h3>
+         </div>
             <section class="row">
                 <div class="col-12 col-lg-9">
                     <div class="col-12 col-lg-12 p-2">
                             <article class="card h-100 bg-dark text-white shadow-sm">
                                 <div class="card-body">
-                                
                                     <form>
                                         <div class="form-row">
-                                          <div class="form-group col-md-6">
+                                          <div class="form-group col-md-12">
                                             <label for="inputEmail4">Correo</label>
                                             <input type="email" class="form-control" id="inputEmail4" placeholder="Correo electronico">
                                           </div>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-12">
                                           <label for="inputAddress">Direccion</label>
                                           <input type="text" class="form-control" id="inputAddress" placeholder="Diagonal, calle, avenida # 112 -111">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-12">
                                           <label for="inputAddress2">Direccion 2</label>
                                           <input type="text" class="form-control" id="inputAddress2" placeholder="Casa, apartamento, piso, interior">
                                         </div>
                                         <div class="form-row">
-                                          <div class="form-group col-md-6">
+                                          <div class="form-group col-md-12">
                                             <label for="inputCity">Pais</label>
                                             <input type="text" class="form-control" id="inputCity">
                                           </div>
-                                          <div class="form-group col-md-4">
+                                          <div class="form-group col-md-12">
                                             <label for="inputState">Ciudad</label>
                                             <input type="text" class="form-control" id="inputState">
                                           </div>
-                                          <div class="form-group col-md-2">
+                                          <div class="form-group col-md-12">
                                             <label for="inputZip">Codigo Postal</label>
                                             <input type="text" class="form-control" id="inputZip">
                                           </div>
@@ -112,13 +122,40 @@
                             </article>
                     </div>
                 </div>
+                <aside class="col-12 col-lg-3 p-2">
+                    <article class="card h-100 bg-secondary shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex mb-3">
+                              <a href="https://tuquejasuma.com/media/images/entity364_square_mT3csfB.png"><img src="./imagenes/Facebook.png" alt="" width="90" height="90" class="border-border-secondary border-3 rounded-circle"></a>
+                                <div class="ps-lg-3">
+                                    <h3 class="m-0 h5">Redes Sociales</h3>
+                                    <p class="m-0 h6"></p>
+                                </div>
+                            </div>
+                            <div >
+                                <!--Insercion codigo facebook-->
+                                <div class="fb-page" data-href="https://www.facebook.com/UniversidadUNAD/" data-tabs="timeline, events" 
+                                data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" 
+                                data-show-facepile="true"><blockquote cite="https://www.facebook.com/UniversidadUNAD/" class="fb-xfbml-parse-ignore">
+                                <a href="https://www.facebook.com/UniversidadUNAD/">Universidad Nacional Abierta y a Distancia - UNAD Colombia</a>
+                                </blockquote></div>
+                                <!--Fin insercion codigo facebook-->
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                    </article>
+                </aside>
                 <div class="col-12 col-lg-12">
                     <footer>
-                        <h6>sicastrot@unadvirtua.edu.co, Actualizado el 11/04/2021</h6>
+                        <h6>sicastrot@unadvirtua.edu.co, Actualizado el 23/10/2021</h6>
                     </footer>
                 </div>
             </section>
         </div>
     </main>
 </body>
+<script src="./js/main.js"></script>
+<script src="./js/bootstrap.min.js"></script>
 </html>

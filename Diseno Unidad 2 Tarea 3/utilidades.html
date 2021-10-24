@@ -8,10 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;300;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/bootstrap.min.css"> 
-    <script type=" text/javascript" src="./js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"> <!-- Fuente de Iconos-->
     <link rel="stylesheet" href="./css/modoDark.css"> <!-- Estilo Css Modo Oscuro -->
-    
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
     <!-- Insercion Codigo Facebook    -->
@@ -36,7 +35,8 @@
                                         <button class="darkModeSwitch" id="switch" style="position: absolute; right: 2%;">
                                         <span><i class="fa fa-sun"></i></span>   
                                         <span><i class="fa fa-moon"></i></span>
-                                        </button><!--Fin Boton Modo Noche-->
+                                        </button>
+                                        <!--Fin Boton Modo Noche-->
                                   <li class="nav-item ">
                                     <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
                                   </li>
@@ -45,10 +45,19 @@
                                       Administrador
                                     </a>
                                   </li>
-                                  <li class="nav-item ">
-                                    <a class="nav-link " href="./inventario.html" >
+                                  <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                       Inventario
                                     </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="./inventario.html">Ingresar Producto</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="./actualizarInventario.html">Actualizar Producto</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="./borrarInventario.html">Eliminar Producto</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="./consultarInventario.html">Consultar Producto</a></li>
+                                    </ul>
                                   </li>
                                   <li class="nav-item ">
                                     <a class="nav-link " href="./utilidades.html" >
@@ -68,12 +77,15 @@
                           </nav>
                      <!--Fin de la Barra de Navegacion-->
                 </div>
+                <div class="col-12 col-lg-12">
+                    <h3 class="card-title text-center" style="color:red;"> DATA MANAGEMENT, BALANCE AND RECORDING</h3>
+               </div>
                 <section class="row">
                     <div class="col-12 col-lg-9">
                        <div class="row"> 
                             <!--Primer contenedor-->
                             <div class="col-12 col-lg-12 p-12">
-                                <article class="card h-100 bg-dark text-white shadow-sm">
+                                <article class="card h-100 bg-light text-danger shadow-sm">
                                     <div class="card-body">
                                         <div class="d-flex mb-3">
                                             <a href=""><img src="./imagenes/BABG-NEGRO.png" alt="" width="90" height="90" class="border-border-secondary border-3 rounded-circle"></a>
@@ -82,13 +94,102 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <br><br>
-                                            <p class="h5">Aqui Texto descriptivo de alguna actividad</p>
+                                          <section class="row mt-4">
+                                            <h1 class="d-4  text-danger text-center">Conversor de Medida</h1>
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form class="row" id="formEquivalencia">
+                                                            <div class="form-group col-md-3">
+                                                                <label for="">Unidad de Medida</label>
+                                                                <select class="form-control" id="selectUmedida">
+                                                                    <option value="0">--Seleccione--</option>
+                                                                    <option value="1">Byte</option>
+                                                                    <option value="2">Kilobyte</option>
+                                                                    <option value="3">Megabyte</option>
+                                                                    <option value="4">Gigabyte</option>
+                                                                    <option value="5">Terabyte</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group col-md-2">
+                                                                <label for="">Valor a Convertir</label>
+                                                                <input type="number" class="form-control" id="inputValor"></div>
+                                                            <div class="form-group col-md-3">
+                                                                <label for="">Unidad de Medida a Convertir</label>
+                                                                <select class="form-control" id="selectUmedidaC">
+                                                                    <option value="0">--Seleccione--</option>
+                                                                    <option value="1">Byte</option>
+                                                                    <option value="2">Kilobyte</option>
+                                                                    <option value="3">Megabyte</option>
+                                                                    <option value="4">Gigabyte</option>
+                                                                    <option value="5">Terabyte</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group col-md-3">
+                                                                <label for="">Valor Calculado</label>
+                                                                <input type="number" class="form-control" id="outputCalculado" disabled></div>
+                                                            <div class="form-group col-md-1 contenedor-boton mt-4">
+                                                                  <button class="btn btn-primary" type="submit"> Limpiar
+                                                                  </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
                                         </div>
+                                        <div>
+                                          <section class="row mt-4">
+                                            <h1 class="d-4  text-danger text-center">Valor de Venta</h1>
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form class="row" id="formDetalle">
+                                                            <div class="form-group col-md-3">
+                                                                <label for="">Valor Compra</label>
+                                                                <input type="number" class="form-control" id="inputCantidad"></div>
+                                                            <div class="form-group col-md-5">
+                                                                <label for="">% Ganancia</label>
+                                                                <input type="number" class="form-control" id="inputDescripcion"></div>
+                                                            <div class="form-group col-md-3">
+                                                                <label for="">% Iva</label>
+                                                                <input type="number" class="form-control" id="inputPUnitario"></div>
+                                                            <div class="form-group col-md-1 contenedor-boton mt-4">
+                                                                <button class="btn btn-primary" type="submit"> Agregar
+                                                                </button>
+                                                             </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        </div>
+                                        <div>
+                                          <section class="row mt-4">
+                                            <div class="col">
+                                                <table class="table text-center">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Valor de Compra</th>
+                                                            <th>% Utilidad</th>
+                                                            <th>% Iva</th>
+                                                            <th>Valor de Venta</th>
+                                                            <th>Ganancia</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="cuerpoTabla">
+                                     
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                     
+                                        </section>
+                                        </div>
+                                       
                                     </div>
                                 </article>
                             </div>
-                            <!--Fin cuarto contenedor-->
+                            <!--Fin primer contenedor-->
                         </div> 
                         <!--Inicio pie de pagina-->
                         <div class="col-12 col-lg-12 shadow-sm text-white border border-dark" style="background-color: #919199;">
@@ -138,4 +239,6 @@
     </main>
 </body>
 <script src="./js/main.js"></script>
+<script src="./js/utilidades.js"></script>
+<script src="./js/bootstrap.min.js"></script>
 </html>
